@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a, i, result;
+
+    printf("Enter the number for the table: ");
+    scanf("%d", &a);
+
+    for (i = 0; i <= 10; i++) {  // Removed the incorrect semicolon
+        result = a * i;
+        printf("%d x %d = %d\n", a, i, result);  // Corrected format
+    }
+
+    return 0;
+}
