@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+int main() {
+    int num, ones, tens, hundreds, thousands;
+
+    // 1. Add 2
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Result after adding 2: %d\n", num + 2);
+
+    // 2. Subtract 5
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Result after subtracting 5: %d\n", num - 5);
+
+    // 3. Multiply by 3
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Result after multiplying by 3: %d\n", num * 3);
+
+    // 4. Divide by 6 (quotient)
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Quotient after dividing by 6: %d\n", num / 6);
+
+    // 5. Divide by 8 (remainder)
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Remainder after dividing by 8: %d\n", num % 8);
+
+    // 6. One’s digit of a two-digit number
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+    ones = num % 10;
+    printf("One’s digit: %d\n", ones);
+
+    // 7. Ten’s digit of a two-digit number
+    tens = num / 10;
+    printf("Ten’s digit: %d\n", tens);
+
+    // 8. One’s digit of a three-digit number
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+    ones = num % 10;
+    hundreds = num / 100;
+    tens = (num / 10) % 10;
+    printf("One’s digit: %d\n", ones);
+    printf("Hundred’s digit: %d\n", hundreds);
+    printf("Ten’s digit: %d\n", tens);
+    printf("Sum of digits: %d\n", ones + tens + hundreds);
+
+    // 9.Reverse a two-digit number
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+    printf("Reversed number: %d%d\n", num % 10, num / 10);
+
+    // 10.Reverse a three-digit number
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+    printf("Reversed number: %d%d%d\n", num % 10, (num / 10) % 10, num / 100);
+
+    // 11.Reverse first two digits of a four-digit number
+    printf("Enter a four-digit number: ");
+    scanf("%d", &num);
+    thousands = num / 1000;
+    hundreds = (num / 100) % 10;
+    tens = (num / 10) % 10;
+    ones = num % 10;
+    printf("Modified number: %d%d%d%d\n", hundreds, thousands, tens, ones);
+    
+    return 0;
+}
+
